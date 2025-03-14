@@ -1,0 +1,105 @@
+// Code for displaying main conjoint profiles table
+
+<p>Winning candidate will go on to compete in the general election:<br>
+&nbsp;</p>
+<style type="text/css">/* Ensure the container is responsive */
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Enables scrolling only when needed */
+    }
+
+    #conjointTable {
+        border-collapse: collapse; /* Ensures clean table borders */
+        width: 100%; /* Make it responsive */
+        max-width: 100%; /* Prevents overflow */
+        table-layout: fixed; /* Forces columns to fit the width */
+    }
+
+    #conjointTable th, #conjointTable td {
+        border: 1px solid black;
+        padding: 6px 8px; /* Default padding */
+        text-align: center; /* Center text */
+        word-wrap: break-word; /* Ensures content wraps */
+        overflow: hidden; /* Prevents content from expanding cells */
+    }
+
+    #conjointTable th {
+        background-color: #f2f2f2; /* Light gray background for headers */
+        font-weight: bold;
+    }
+
+    /* Adjust column widths */
+    #conjointTable th:first-child,
+    #conjointTable td:first-child {
+        width: 28%; /* Reduce first column width */
+    }
+
+    #conjointTable th:nth-child(2),
+    #conjointTable td:nth-child(2),
+    #conjointTable th:nth-child(3),
+    #conjointTable td:nth-child(3) {
+        width: 37.5%; /* Increase space for profile columns */
+    }
+
+    /* Reduce padding further for small screens */
+    @media screen and (max-width: 600px) {
+        #conjointTable th, #conjointTable td {
+            padding: 1px 2px; /* Reduce padding for better fit */
+            font-size: 14px; /* Slightly smaller text for better readability */
+            word-break: break-word; /* Ensure long words wrap */
+        }
+    }
+</style>
+<div class="table-container">
+<table id="conjointTable" border="1">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th id="profile1_name">Profile 1</th>
+			<th id="profile2_name">Profile 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Education</td>
+			<td id="profile1_education">&nbsp;</td>
+			<td id="profile2_education">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Race</td>
+			<td id="profile1_race">&nbsp;</td>
+			<td id="profile2_race">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Family ties</td>
+			<td id="profile1_family">&nbsp;</td>
+			<td id="profile2_family">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Time spent living as an adult</td>
+			<td id="profile1_residence">&nbsp;</td>
+			<td id="profile2_residence">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Birthplace</td>
+			<td id="profile1_birth">&nbsp;</td>
+			<td id="profile2_birth">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Residence</td>
+			<td id="profile1_house">&nbsp;</td>
+			<td id="profile2_house">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Political experience</td>
+			<td id="profile1_political_experience">&nbsp;</td>
+			<td id="profile2_political_experience">&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Age</td>
+			<td id="profile1_age">44</td>
+			<td id="profile2_age">44</td>
+		</tr>
+	</tbody>
+</table>
+</div>
